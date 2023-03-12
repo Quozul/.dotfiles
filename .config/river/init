@@ -1,0 +1,38 @@
+#!/bin/sh
+
+riverctl map normal Super+Shift E exit
+riverctl map normal Super T spawn alacritty
+riverctl map normal Super R spawn "rofi -show drun"
+riverctl keyboard-layout fr
+
+riverctl map normal Super Right snap right
+riverctl map normal Super Left snap left
+riverctl map normal Super Up snap up
+riverctl map normal Super Down snap down
+
+riverctl map-pointer normal Super BTN_LEFT move-view
+riverctl map-pointer normal Super BTN_RIGHT resize-view
+riverctl map normal Alt F4 close
+riverctl map normal Alt Tab focus-view next
+riverctl map normal Alt+Shift Tab focus-view previous
+
+riverctl map normal None Print spawn "grim -g '$(slurp)'"
+riverctl focus-follows-cursor always
+
+riverctl spawn rivertile
+riverctl default-layout rivertile
+riverctl map normal Super S toggle-float
+riverctl map normal Super F toggle-fullscreen
+riverctl map normal Super Z zoom
+
+riverctl input pointer-1133-49970-Logitech_Gaming_Mouse_G502 accel-profile flat
+riverctl input pointer-1133-49970-Logitech_Gaming_Mouse_G502 pointer-accel 0.1
+
+for mode in normal locked
+do
+    riverctl map $mode None XF86AudioLowerVolume spawn "amixer -q sset Master 3%-"
+    riverctl map $mode None XF86AudioRaiseVolume spawn "amixer -q sset Master 3%+"
+done
+
+kanshi &
+waybar &
