@@ -1,0 +1,15 @@
+* {
+  font-family: 'FiraCode Nerd Font Mono';
+}
+
+window#waybar {
+  border: none;
+  background: transparent;
+}
+
+.modules-left, .modules-center, .modules-right {
+	border-radius: 16px;
+	margin: 8px;
+  background: #0a0a1a;
+  color: white;
+}
