@@ -1,83 +1,78 @@
 * {
-  font-family: 'FiraCode Nerd Font Mono';
+  font-family: 'FiraCode Nerd Font Mono', 'FiraCode';
 }
 
 window#waybar {
-    background: #1E1E28;
+    background: transparent;
     color: #DADAE8;
 }
 
 tooltip {
 	background: #1E1E28;
-	border-radius: 15px;
+	border-radius: 6px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: #a4b9ef;
-	}
-
-#workspaces {
-    background: #332E41;
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 15px;
 }
 
-#workspaces button {
+#tags {
+    background: #332E41;
+    margin-left: 12px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    border-radius: 6px;
+}
+
+#tags button {
     padding-left: 10px;
     padding-right: 10px;
     min-width: 0;
     color: #DADAE8;
+    border: none;
+    box-shadow: none;
 }
 
-#workspaces button.focused {
-    color: #A4B9EF;
+#tags button.focused {
+    background-color: #A4B9EF;
 }
 
-#workspaces button.urgent {
+#tags button.urgent {
     color: #F9C096;
 }
 
-#workspaces button:hover {
+#tags button:hover {
+    font-weight: inherit;
     background: #332e41;
-    border-color: #332e41;
-	color: #A4B9EF;
+    border: none;
+    color: #DADAE8;
+    border-top: none;
+    box-shadow: none;
 }
 
-#clock, #battery, #pulseaudio, #workspaces, #mpd  {
-	padding: 2px 10px;
+#network, #tray, #memory, #cpu, #clock, #backlight, #battery, #pulseaudio, #workspaces, #mpd  {
+    padding: 2px 10px;
     background: #332E41;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 12px;
+    margin-bottom: 0px;
 }
 
-#network {
-    padding-left: 15px;
-    padding-right: 2px;
-    background: #332E41;
-    border-radius: 15px 0px 0px 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+/* left side */
+#memory, #network {
+    border-radius: 6px 0 0 6px;
 }
 
-#custom-vpn {
-    background: #332E41;
-    padding-right: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+/* right side */
+#battery, #cpu {
+    margin-right: 12px;
+    border-radius: 0 6px 6px 0;
+}
+
+/* island */
+#tray {
+    margin-right: 12px;
+    border-radius: 6px;
 }
 
 #clock {
-    padding-right: 15px;
-    margin-right: 5px;
-    border-radius: 0px 15px 15px 0px;
-}
-
-#custom-spotify {
-    background: #332E41;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    border-radius: 15px;
+    border-radius: 6px;
 }

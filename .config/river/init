@@ -1,8 +1,8 @@
 #!/bin/sh
 
 riverctl map normal Super+Shift E exit
-riverctl map normal Super T spawn alacritty
-riverctl map normal Super R spawn "rofi -show drun"
+riverctl map normal Super T spawn kitty
+riverctl map normal Super R spawn "./.config/rofi/launchers/type-1/launcher.sh"
 riverctl keyboard-layout fr
 
 riverctl map normal Super Right snap right
@@ -15,9 +15,12 @@ riverctl map-pointer normal Super BTN_RIGHT resize-view
 riverctl map normal Alt F4 close
 riverctl map normal Alt Tab focus-view next
 riverctl map normal Alt+Shift Tab focus-view previous
+riverctl map normal Super Tab send-to-output next
+riverctl map normal Super+Shift Tab send-to-output previous
+riverctl map normal Super L spawn "swaylock -c 000000 -F"
 
-riverctl map normal None Print spawn "grim -g '$(slurp)'"
-riverctl focus-follows-cursor always
+riverctl map normal None Print spawn 'slurp | grim -g - - | wl-copy'
+riverctl focus-follows-cursor normal
 
 riverctl spawn rivertile
 riverctl default-layout rivertile
@@ -34,5 +37,45 @@ do
     riverctl map $mode None XF86AudioRaiseVolume spawn "amixer -q sset Master 3%+"
 done
 
+# tag 1
+riverctl map normal Super 0x26 set-focused-tags 1
+riverctl map normal Super+Shift 0x26 set-view-tags 1
+
+# tag 2
+riverctl map normal Super 0xE9 set-focused-tags 2
+riverctl map normal Super+Shift 0xE9 set-view-tags 2
+
+# tag 3
+riverctl map normal Super 0x22 set-focused-tags 4
+riverctl map normal Super+Shift 0x22 set-view-tags 4
+
+# tag 4
+riverctl map normal Super 0x27 set-focused-tags 8
+riverctl map normal Super+Shift 0x27 set-view-tags 8
+
+# tag 5
+riverctl map normal Super 0x28 set-focused-tags 16
+riverctl map normal Super+Shift 0x28 set-view-tags 16
+
+# tag 6
+riverctl map normal Super 0x2D set-focused-tags 32
+riverctl map normal Super+Shift 0x2D set-view-tags 32
+
+# tag 7
+riverctl map normal Super 0xE8 set-focused-tags 64
+riverctl map normal Super+Shift 0xE8 set-view-tags 64
+
+# tag 8
+riverctl map normal Super 0x5F set-focused-tags 128
+riverctl map normal Super+Shift 0x5F set-view-tags 128
+
+# tag 9
+riverctl map normal Super 0xE7 set-focused-tags 256
+riverctl map normal Super+Shift 0xE7 set-view-tags 256
+
+swaybg -i $HOME/Pictures/Wallpapers/Voyager/voyager-lofi-dreams-2.jpg &
+
 kanshi &
 waybar &
+mako &
+/usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11

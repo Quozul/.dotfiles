@@ -1,17 +1,12 @@
 {
     "position": "top", 
     "modules-left": ["river/tags"],
-    "modules-center": ["custom/spotify"],
-    "modules-right": ["network", "custom/vpn", "pulseaudio", "battery", "clock"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "memory", "cpu", "network", "pulseaudio", "backlight", "battery"],
     // Modules configuration
 	"river/tags": {
-		"num-tags": 5
+		"num-tags": 9
      },
-    "custom/vpn": {
-    	"format": "{}",
-        "interval": 1,
-        "exec": "/home/loki/bin/waybar-vpn.sh"
-    },
     "custom/spotify": {
     	"format": "<span foreground='#E5B4E2'> </span><span font='OperatorMonoSSm Nerd Font weight=325 Italic'>{}</span>",
         "interval": 1,
@@ -25,9 +20,21 @@
         "exec": "/home/loki/bin/spotify.sh"
     },
 	"clock": {
-		"format": "<span foreground='#C6AAE8'> </span>{:%a %d %H:%M}",
+		"format": "{:%a %d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 	},
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", ""]
+  },
+  "cpu": {
+    "interval": 5,
+    "format": " {}%"
+  },
+  "memory": {
+    "interval": 5,
+    "format": " {used:0.1f}G"
+  },
 	"battery": {
         "states": {
             "warning": 30,
