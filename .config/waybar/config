@@ -1,10 +1,14 @@
 {
     "position": "top", 
-    "modules-left": ["river/tags"],
+    "modules-left": ["river/tags", "river/window"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "memory", "cpu", "network", "pulseaudio", "backlight", "battery"],
     // Modules configuration
-	"river/tags": {
+
+  "river/window": {
+    "max-length": 50
+  },
+  	"river/tags": {
 		"num-tags": 9
      },
     "custom/spotify": {

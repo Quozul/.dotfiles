@@ -1,1 +1,6 @@
 theme = "base16_transparent"
+
+# Commands: https://github.com/helix-editor/helix/blob/master/helix-term/src/commands.rs#L219
+[keys.insert]
+"C-left" = "move_prev_word_start"
+"C-right" = "move_next_word_end"
