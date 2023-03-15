@@ -28,6 +28,10 @@ riverctl map normal Super S toggle-float
 riverctl map normal Super F toggle-fullscreen
 riverctl map normal Super Z zoom
 
+riverctl border-color-focused 0xb58900
+riverctl border-color-urgent 0xb58900
+riverctl border-color-unfocused 0x002b36
+
 riverctl input pointer-1133-49970-Logitech_Gaming_Mouse_G502 accel-profile flat
 riverctl input pointer-1133-49970-Logitech_Gaming_Mouse_G502 pointer-accel 0.1
 
