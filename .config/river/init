@@ -83,3 +83,5 @@ kanshi &
 waybar &
 mako &
 /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
+/usr/libexec/xdg-desktop-portal-wlr -l DEBUG &
+/usr/libexec/xdg-desktop-portal --verbose -r &
