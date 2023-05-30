@@ -145,3 +145,10 @@ format = '[ $symbol ($version) ]($style)'
 min_time = 500
 style = "bg:#33658A"
 format = '[ $duration ]($style)'
+
+[python]
+symbol = '👾 '
+style = "bg:#FFFFFF"
+pyenv_version_name = true
+format = '[ $symbol ($version) $virtualenv ]($style)'
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']

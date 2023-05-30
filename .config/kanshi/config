@@ -1,6 +1,6 @@
 profile {
-	output "Iiyama North America PL2530H 1154373302957" mode 1920x1080 position -1920,0
-	output "LG Electronics LG ULTRAGEAR 105NTUW3L590" mode 2560x1440 position 0,0
+	output "Iiyama North America PL2530H 1154373302957" mode 1920x1080 position 0,0
+	output "LG Electronics LG ULTRAGEAR 105NTUW3L590" mode 2560x1440 position 1920,0
 }
 
 profile {
