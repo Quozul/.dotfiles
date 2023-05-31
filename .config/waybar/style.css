@@ -1,86 +1,112 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: mononoki Nerd Font;
-    font-size: 14px;
-    min-height: 0;
+	font-size: 20px;
+	font-family: monospace;
+    color: black;
 }
 
-window#waybar {
-    background: transparent;
-    color: white;
-}
-
-tooltip {
-	background: #0f0f0f;
-	border-radius: 15px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #262626;
-	}
-
-#workspaces button {
-    padding: 5px 10px;
-    color: #f0f0f0;
-}
-
-#workspaces button.focused {
-    color: #0f0f0f;
-    background-color: #c49ec4;
-    border-radius: 15px;
-}
-
-#workspaces button.urgent {
-    color: #0f0f0f;
-    background-color: #9ec3c4;
-    border-radius: 15px;
-}
-
-#workspaces button:hover {
-	background-color: #c49ec4;
-	color: #0f0f0f;
-	border-radius: 15px;
-}
-
-#custom-date, #clock, #battery, #pulseaudio, #network, #workspaces {
-	background-color: #0f0f0f;
-	padding: 5px 10px;
-	margin: 5px 0px;
+#window {
+    background: #f2cdcd;
 }
 
 #workspaces {
-	background-color: #262626;
-	border-radius: 15px 0px 0px 15px;
+    background: #f5e0dc;
 }
 
-#custom-date {
-	color: #9ec3c4;
+#workspaces button, #cpu, #memory, #pulseaudio, #window, #custom-spotify, #clock, #battery, #backlight, #tray{
+	padding: 0 8px;
 }
 
-#clock {
-    color: #a39ec4;
-    border-radius: 0px 15px 15px 0px;
-    margin-right: 10px;
+#custom-arrow-0-outer {
+    color: #f5e0dc;
+    background-color: #f2cdcd;
 }
 
-#battery {
-    color: #9ec49f;
+#sway-workspaces {
+    background-color: #f5e0dc;
 }
 
-#battery.charging {
-    color: #9ec49f;
+#custom-arrow-1-outer {
+    color: #f2cdcd;
+    background-color: #f5c2e7;
 }
 
-#battery.warning:not(.charging) {
-    background-color: #c49ea0;
-    color: #0f0f0f;
+#sway-window {
+    background-color: #f2cdcd;
 }
 
-#network {
-	color: #c4c19e;
-	border-radius: 0px 0px 0px 0px;
+#custom-arrow-2-outer {
+    color: #f5c2e7;
+    background-color: #cba6f7;
+}
+
+#backlight {
+    background-color: #f5c2e7;
+}
+
+#custom-arrow-3-outer {
+    color: #cba6f7;
+    background-color: #f38ba8;
 }
 
 #pulseaudio {
-	color: #a5b4cb;
+    background-color: #cba6f7;
+}
+
+#custom-arrow-4-outer {
+    color: #f38ba8;
+    background-color: #eba0ac;
+}
+
+#memory {
+    background-color: #f38ba8;
+}
+
+#custom-arrow-5-outer {
+    color: #eba0ac;
+    background-color: #fab387;
+}
+
+#cpu {
+    background-color: #eba0ac;
+}
+
+#custom-arrow-6-outer {
+    color: #fab387;
+    background-color: #f9e2af;
+}
+
+#battery {
+    background-color: #fab387;
+}
+
+#custom-arrow-7-outer {
+    color: #f9e2af;
+    background-color: #a6e3a1;
+}
+
+#clock {
+    background-color: #f9e2af;
+}
+
+#custom-arrow-8-outer {
+    color: #a6e3a1;
+    background-color: #94e2d5;
+}
+
+#custom-spotify {
+    background-color: #a6e3a1;
+}
+
+#custom-arrow-9-outer {
+    color: #94e2d5;
+    background-color: #89dceb;
+}
+
+#tray {
+    background-color: #94e2d5;
+}
+
+window#waybar {
+	background: #89dceb;
+	color: black;
 }
