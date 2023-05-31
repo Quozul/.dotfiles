@@ -12,6 +12,24 @@
     background: #f5e0dc;
 }
 
+#workspaces button {
+    transition: none;
+    border-radius: 0;
+    border: none;
+}
+
+#workspaces button.focused {
+    background-color: #c49ec4;
+}
+
+#workspaces button.urgent {
+    background-color: #f38ba8;
+}
+
+#workspaces button:hover {
+	background-color: #c49ec4;
+}
+
 #workspaces button, #cpu, #memory, #pulseaudio, #window, #custom-spotify, #clock, #battery, #backlight, #tray{
 	padding: 0 8px;
 }
@@ -30,7 +48,7 @@
     background-color: #f5c2e7;
 }
 
-#sway-window {
+#backlight {
     background-color: #f2cdcd;
 }
 
@@ -39,7 +57,7 @@
     background-color: #cba6f7;
 }
 
-#backlight {
+#pulseaudio {
     background-color: #f5c2e7;
 }
 
@@ -48,7 +66,7 @@
     background-color: #f38ba8;
 }
 
-#pulseaudio {
+#memory {
     background-color: #cba6f7;
 }
 
@@ -57,7 +75,7 @@
     background-color: #eba0ac;
 }
 
-#memory {
+#cpu {
     background-color: #f38ba8;
 }
 
@@ -66,7 +84,7 @@
     background-color: #fab387;
 }
 
-#cpu {
+#battery {
     background-color: #eba0ac;
 }
 
@@ -75,7 +93,7 @@
     background-color: #f9e2af;
 }
 
-#battery {
+#clock {
     background-color: #fab387;
 }
 
@@ -84,7 +102,7 @@
     background-color: #a6e3a1;
 }
 
-#clock {
+#custom-spotify {
     background-color: #f9e2af;
 }
 
@@ -93,20 +111,11 @@
     background-color: #94e2d5;
 }
 
-#custom-spotify {
+#tray {
     background-color: #a6e3a1;
 }
 
-#custom-arrow-9-outer {
-    color: #94e2d5;
-    background-color: #89dceb;
-}
-
-#tray {
-    background-color: #94e2d5;
-}
-
 window#waybar {
-	background: #89dceb;
+	background: #94e2d5;
 	color: black;
 }
