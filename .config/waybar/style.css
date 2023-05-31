@@ -1,15 +1,6 @@
 * {
-	font-size: 20px;
-	font-family: monospace;
-    color: black;
-}
-
-#window {
-    background: #f2cdcd;
-}
-
-#workspaces {
-    background: #f5e0dc;
+	font-size: 16px;
+	font-family: "JetBrainsMono Nerd Font Mono", monospace;
 }
 
 #workspaces button {
@@ -34,88 +25,88 @@
 	padding: 0 8px;
 }
 
-#custom-arrow-0-outer {
-    color: #f5e0dc;
-    background-color: #f2cdcd;
+#workspaces {
+    background-color: #F28FAD;
 }
 
-#sway-workspaces {
-    background-color: #f5e0dc;
-}
-
-#custom-arrow-1-outer {
-    color: #f2cdcd;
-    background-color: #f5c2e7;
+#custom-arrow-1 {
+    color: #F28FAD;
+    background-color: #ABE9B3;
 }
 
 #backlight {
-    background-color: #f2cdcd;
+    background-color: #ABE9B3;
 }
 
-#custom-arrow-2-outer {
-    color: #f5c2e7;
-    background-color: #cba6f7;
+#custom-arrow-2 {
+    color: #ABE9B3;
+    background-color: #FAE3B0;
 }
 
 #pulseaudio {
-    background-color: #f5c2e7;
+    background-color: #FAE3B0;
 }
 
-#custom-arrow-3-outer {
-    color: #cba6f7;
-    background-color: #f38ba8;
+#custom-arrow-3 {
+    color: #FAE3B0;
+    background-color: #96CDFB;
 }
 
 #memory {
-    background-color: #cba6f7;
+    background-color: #96CDFB;
 }
 
-#custom-arrow-4-outer {
-    color: #f38ba8;
-    background-color: #eba0ac;
+#custom-arrow-4 {
+    color: #96CDFB;
+    background-color: #F5C2E7;
 }
 
 #cpu {
-    background-color: #f38ba8;
+    background-color: #F5C2E7;
 }
 
-#custom-arrow-5-outer {
-    color: #eba0ac;
-    background-color: #fab387;
+#custom-arrow-5 {
+    color: #F5C2E7;
+    background-color: #89DCEB;
 }
 
 #battery {
-    background-color: #eba0ac;
+    background-color: #89DCEB;
 }
 
-#custom-arrow-6-outer {
-    color: #fab387;
-    background-color: #f9e2af;
+#custom-arrow-6 {
+    color: #89DCEB;
+    background-color: #D9E0EE;
 }
 
 #clock {
-    background-color: #fab387;
+    background-color: #D9E0EE;
 }
 
-#custom-arrow-7-outer {
-    color: #f9e2af;
-    background-color: #a6e3a1;
+#custom-arrow-7 {
+    color: #D9E0EE;
+    background-color: #F28FAD;
 }
 
 #custom-spotify {
-    background-color: #f9e2af;
+    background-color: #F28FAD;
 }
 
-#custom-arrow-8-outer {
-    color: #a6e3a1;
-    background-color: #94e2d5;
+#custom-arrow-8 {
+    color: #F28FAD;
+    background-color: #ABE9B3;
 }
 
 #tray {
-    background-color: #a6e3a1;
+    background-color: #ABE9B3;
+}
+
+#custom-arrow-9 {
+    color: #ABE9B3;
+    background-color: #1E1D2F;
 }
 
 window#waybar {
-	background: #94e2d5;
-	color: black;
+	background: #1E1D2F;
+	color: #1A1826;
 }

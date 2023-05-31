@@ -139,60 +139,60 @@
       "09": "九"
     }
   },
-  "custom/arrow-0-outer": {
+  "custom/arrow-1": {
     "format": "",
     "tooltip": false
   },
-  "custom/arrow-1-outer": {
+  "custom/arrow-2": {
     "format": "",
     "tooltip": false
   },
-  "custom/arrow-2-outer": {
+  "custom/arrow-3": {
     "format": "",
     "tooltip": false
   },
-  "custom/arrow-3-outer": {
+  "custom/arrow-4": {
     "format": "",
     "tooltip": false
   },
-  "custom/arrow-4-outer": {
+  "custom/arrow-5": {
     "format": "",
     "tooltip": false
   },
-  "custom/arrow-5-outer": {
+  "custom/arrow-6": {
     "format": "",
     "tooltip": false
   },
-  "custom/arrow-6-outer": {
+  "custom/arrow-7": {
     "format": "",
     "tooltip": false
   },
-  "custom/arrow-7-outer": {
+  "custom/arrow-8": {
     "format": "",
     "tooltip": false
   },
-  "custom/arrow-8-outer": {
+  "custom/arrow-9": {
     "format": "",
     "tooltip": false
   },
   "modules-left": [
     "sway/workspaces",
-    "custom/arrow-0-outer",
+    "custom/arrow-1",
     "backlight",
-    "custom/arrow-1-outer",
+    "custom/arrow-2",
     "pulseaudio",
-    "custom/arrow-2-outer",
+    "custom/arrow-3",
     "memory",
-    "custom/arrow-3-outer",
+    "custom/arrow-4",
     "cpu",
-    "custom/arrow-4-outer",
+    "custom/arrow-5",
     "battery",
-    "custom/arrow-5-outer",
+    "custom/arrow-6",
     "clock",
-    "custom/arrow-6-outer",
+    "custom/arrow-7",
     "custom/spotify",
-    "custom/arrow-7-outer",
+    "custom/arrow-8",
     "tray",
-    "custom/arrow-8-outer"
+    "custom/arrow-9"
   ]
 }
