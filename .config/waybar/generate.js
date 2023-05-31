@@ -5,23 +5,24 @@ const moduleGroups = {
     "modules-left": ["sway/workspaces", "backlight", "pulseaudio", "memory", "cpu", "battery", "clock", "custom/spotify", "tray"],
 }
 
+const backgroundColor = "#1E1D2F"
+const foregroundColor = "#1A1826"
+
 const colors = [
-    "#f5e0dc",
-    "#f2cdcd",
-    "#f5c2e7",
-    "#cba6f7",
-    "#f38ba8",
-    "#eba0ac",
-    "#fab387",
-    "#f9e2af",
-    "#a6e3a1",
-    "#94e2d5",
-    "#89dceb",
-    "#74c7ec",
-    "#89b4fa",
-    "#b4befe",
-    "#181825",
-    "#11111b",
+    "#F28FAD",
+    "#ABE9B3",
+    "#FAE3B0",
+    "#96CDFB",
+    "#F5C2E7",
+    "#89DCEB",
+    "#D9E0EE",
+    "#F28FAD",
+    "#ABE9B3",
+    "#FAE3B0",
+    "#96CDFB",
+    "#F5C2E7",
+    "#89DCEB",
+    "#D9E0EE",
 ]
 
 const outputModuleGroups = {
@@ -120,17 +121,8 @@ const outputModuleGroups = {
      },
 }
 let outputScss = `* {
-	font-size: 20px;
+	font-size: 16px;
 	font-family: monospace;
-    color: black;
-}
-
-#window {
-    background: ${colors[1]};
-}
-
-#workspaces {
-    background: ${colors[0]};
 }
 
 #workspaces button {
@@ -156,7 +148,17 @@ let outputScss = `* {
 }
 `
 const rightArrow = {format: "", "tooltip": false}
-let index = 0
+let index = 0, i = 0
+
+function getCssKey(module) {
+    if (module.includes("/")) {
+        if (module.startsWith("custom/")) {
+            return module.replace("/", "-")
+        }
+        return module.split("/").at(-1)
+    }
+    return module
+}
 
 for (const key in moduleGroups) {
     if (Object.hasOwnProperty.call(moduleGroups, key)) {
@@ -165,20 +167,23 @@ for (const key in moduleGroups) {
 
         for (const module of modules) {
             const color = colors[index]
-            const name = `arrow-${index++}`
-            const nextColor = colors[index]
+            index = (index + 1) % (colors.length -1)
+            const name = `arrow-${index}`
+            const isLast = ++i === modules.length
+            const nextColor = isLast ? backgroundColor : colors[index]
+            console.log(i, modules.length, nextColor, color)
 
             outputModules.push(module)
-            outputModules.push(`custom/${name}-outer`)
-            outputModuleGroups[`custom/${name}-outer`] = rightArrow
+            outputModules.push(`custom/${name}`)
+            outputModuleGroups[`custom/${name}`] = rightArrow
             outputScss += `
-#custom-${name}-outer {
-    color: ${color};
-    background-color: ${nextColor};
+#${getCssKey(module)} {
+    background-color: ${color};
 }
 
-#${module.replace("/", "-")} {
-    background-color: ${color};
+#custom-${name} {
+    color: ${color};
+    background-color: ${nextColor};
 }
 `
         }
@@ -189,8 +194,8 @@ for (const key in moduleGroups) {
 
 outputScss += `
 window#waybar {
-	background: ${colors[index]};
-	color: black;
+	background: ${backgroundColor};
+	color: ${foregroundColor};
 }
 `;
 
