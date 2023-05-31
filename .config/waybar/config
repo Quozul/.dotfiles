@@ -1,78 +1,102 @@
 {
     "position": "top", 
-    "modules-left": ["river/tags", "river/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["tray", "memory", "cpu", "network", "pulseaudio", "backlight", "battery"],
-    // Modules configuration
+    "height": 30,
+    "modules-center": ["sway/workspaces", "network", "pulseaudio", "battery", "custom/date", "clock"],
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": false,
+		"current-only": false,
+		"persistent_workspaces": {
+			"10": ["DP-1"],
+			"11": ["DP-1"],
+			"12": ["DP-1"],
+			"13": ["DP-1"],
+			"14": ["DP-1"],
+			"15": ["DP-1"],
+			"16": ["DP-1"],
+			"17": ["DP-1"],
+			"18": ["DP-1"],
+			"19": ["DP-1"],
 
-  "river/window": {
-    "max-length": 50
-  },
-  	"river/tags": {
-		"num-tags": 9
+			"00": ["DP-3"],
+			"01": ["DP-3"],
+			"02": ["DP-3"],
+			"03": ["DP-3"],
+			"04": ["DP-3"],
+			"06": ["DP-3"],
+			"07": ["DP-3"],
+			"08": ["DP-3"],
+			"09": ["DP-3"]
+		},
+		"format": "{icon}",
+		"format-icons": {
+			"10": "〇",
+			"11": "一",
+			"12": "二",
+			"13": "三",
+			"14": "四",
+			"15": "五",
+			"16": "六",
+			"17": "七",
+			"18": "八",
+			"19": "九",
+
+			"00": "〇",
+			"01": "一",
+			"02": "二",
+			"03": "三",
+			"04": "四",
+			"05": "五",
+			"06": "六",
+			"07": "七",
+			"08": "八",
+			"09": "九"
+         }
      },
-    "custom/spotify": {
-    	"format": "<span foreground='#E5B4E2'> </span><span font='OperatorMonoSSm Nerd Font weight=325 Italic'>{}</span>",
-        "interval": 1,
-        "exec-if": "pgrep spotify",
-        "on-click": "playerctl -p spotify play-pause",
-        "on-scroll-up": "playerctl -p spotify previous",
-        "on-scroll-down": "playerctl -p spotify next",
-        "tooltip": false,
-        "escape": true,
-        "max-length": 60,
-        "exec": "/home/loki/bin/spotify.sh"
-    },
-	"clock": {
-		"format": "{:%a %d %H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"custom/date": {
+		"format": "󰸗 {}",
+		"interval": 3600,
+		"exec": "/home/loki/bin/waybar-date.sh"
 	},
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["", ""]
-  },
-  "cpu": {
-    "interval": 5,
-    "format": " {}%"
-  },
-  "memory": {
-    "interval": 5,
-    "format": " {used:0.1f}G"
-  },
+	"clock": {
+		"format": "󰅐 {:%H:%M} ",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
 	"battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15,
-        	},
-		    "format": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
-		    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
-		    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon}</span> {capacity}%",
-		    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-		    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-		    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {time}",
-		    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-        	"format-icons": ["", "", "", "", ""],
-            "tooltip-format": "{time}"
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": "󰂄{capacity}%",
+		"format-alt": "{icon} {time}",
+		"format-full": "󱈑 {capacity}%",
+		"format-icons": ["󱊡", "󱊢", "󱊣"]
 	},
 	"network": {
-        "format-wifi": "<span size='13000' foreground='#F2CECF'> </span>{essid}",
-        "format-ethernet": "<span size='13000' foreground='#F2CECF'>󰤭</span> Disconnected",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "<span size='13000' foreground='#F2CECF'> </span>Disconnected",
-		"tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+		"format-wifi": "  {essid}",
+		"format-ethernet": "󰤮 Disconnected",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "󰤮 Disconnected",
+		"tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}"
 	},
 	"pulseaudio": {
-		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"format": "<span size='13000' foreground='#EBDDAA'>{icon}</span> {volume}%",
-        "format-muted": "<span size='14000' foreground='#EBDDAA'></span> Muted",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
+		"on-click": "pactl set-sink-mute 45 toggle",
+		"format": "{icon}  {volume}%",
+		"format-muted": "󰖁 Muted",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+        }
     },
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	}
 }
