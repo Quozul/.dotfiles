@@ -2,11 +2,13 @@ const fs = require("fs/promises")
 const position = "top"
 
 const moduleGroups = {
-    "modules-left": ["sway/workspaces", "backlight", "pulseaudio", "memory", "cpu", "battery", "clock", "custom/spotify", "tray"],
+    "modules-left": ["sway/workspaces", "custom/spotify"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "pulseaudio", "memory", "cpu", "battery", "tray"],
 }
 
-const backgroundColor = "#1E1D2F"
-const foregroundColor = "#1A1826"
+const backgroundColor = "black"
+const foregroundColor = "white"
 
 const colors = [
     "#F28FAD",
@@ -129,6 +131,7 @@ let outputScss = `* {
     transition: none;
     border-radius: 0;
     border: none;
+    color: ${foregroundColor};
 }
 
 #workspaces button.focused {
@@ -147,7 +150,12 @@ let outputScss = `* {
 	padding: 0 8px;
 }
 `
-const rightArrow = {format: "", "tooltip": false}
+
+const arrows = {
+    "left": {format: "", tooltip: false},
+    "center": {},
+    "right": {format: "", tooltip: false}
+}
 let index = 0, i = 0
 
 function getCssKey(module) {
@@ -161,6 +169,8 @@ function getCssKey(module) {
 }
 
 for (const key in moduleGroups) {
+    const arrow = arrows[key.split("-").at(-1)]
+
     if (Object.hasOwnProperty.call(moduleGroups, key)) {
         const modules = moduleGroups[key];
         const outputModules = []
@@ -175,15 +185,16 @@ for (const key in moduleGroups) {
 
             outputModules.push(module)
             outputModules.push(`custom/${name}`)
-            outputModuleGroups[`custom/${name}`] = rightArrow
+            outputModuleGroups[`custom/${name}`] = arrow
             outputScss += `
 #${getCssKey(module)} {
-    background-color: ${color};
+    color: ${foregroundColor};
+    background-color: ${backgroundColor};
 }
 
 #custom-${name} {
-    color: ${color};
-    background-color: ${nextColor};
+    color: ${foregroundColor};
+    background-color: ${backgroundColor};
 }
 `
         }

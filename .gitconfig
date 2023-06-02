@@ -1,0 +1,31 @@
+[user]
+	email = erwan.legloannec@outlook.com
+	name = Erwan
+[push]
+	autoSetupRemote = true
+[alias]
+	f = fetch --all
+	c = commit --allow-empty-message -am
+	p = pull
+	r = rebase -i
+	nb = checkout -b
+	a = add .
+	cs = commit --allow-empty-message -S -am
+	pf = push --force
+	rc = rebase --continue
+	r1 = rebase -i HEAD~1
+	r2 = rebase -i HEAD~2
+	cas = commit --amend -S
+[init]
+	defaultBranch = master
+[pager]
+	branch = false
+[fetch]
+	prune = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesFile = ~/.gitignore
