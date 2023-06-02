@@ -223,7 +223,7 @@ input * {
 #output "LG Electronics LG ULTRAGEAR 105NTUW3L590" mode 2560x1440 position 1920,0
 exec_always xrandr --output $(xrandr | grep -m 1 XWAYLAND | awk '{print $1;}') --primary
 
-gaps inner 8
+gaps inner 0
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next

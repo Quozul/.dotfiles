@@ -140,57 +140,58 @@
     }
   },
   "custom/arrow-1": {
-    "format": "",
+    "format": "",
     "tooltip": false
   },
   "custom/arrow-2": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow-3": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow-4": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow-5": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow-6": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow-7": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow-8": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow-9": {
-    "format": "",
+    "format": "",
     "tooltip": false
   },
   "modules-left": [
     "sway/workspaces",
     "custom/arrow-1",
-    "backlight",
-    "custom/arrow-2",
-    "pulseaudio",
-    "custom/arrow-3",
-    "memory",
-    "custom/arrow-4",
-    "cpu",
-    "custom/arrow-5",
-    "battery",
-    "custom/arrow-6",
-    "clock",
-    "custom/arrow-7",
     "custom/spotify",
+    "custom/arrow-2"
+  ],
+  "custom/arrow-3": {},
+  "modules-center": [
+    "clock",
+    "custom/arrow-3"
+  ],
+  "custom/arrow-4": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/arrow-5": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/arrow-6": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/arrow-7": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/arrow-8": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/arrow-9": {
+    "format": "",
+    "tooltip": false
+  },
+  "modules-right": [
+    "backlight",
+    "custom/arrow-4",
+    "pulseaudio",
+    "custom/arrow-5",
+    "memory",
+    "custom/arrow-6",
+    "cpu",
+    "custom/arrow-7",
+    "battery",
     "custom/arrow-8",
     "tray",
     "custom/arrow-9"

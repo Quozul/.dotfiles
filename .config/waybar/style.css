@@ -1,12 +1,13 @@
 * {
 	font-size: 16px;
-	font-family: "JetBrainsMono Nerd Font Mono", monospace;
+	font-family: monospace;
 }
 
 #workspaces button {
     transition: none;
     border-radius: 0;
     border: none;
+    color: white;
 }
 
 #workspaces button.focused {
@@ -26,87 +27,96 @@
 }
 
 #workspaces {
-    background-color: #F28FAD;
+    color: white;
+    background-color: black;
 }
 
 #custom-arrow-1 {
-    color: #F28FAD;
-    background-color: #ABE9B3;
-}
-
-#backlight {
-    background-color: #ABE9B3;
-}
-
-#custom-arrow-2 {
-    color: #ABE9B3;
-    background-color: #FAE3B0;
-}
-
-#pulseaudio {
-    background-color: #FAE3B0;
-}
-
-#custom-arrow-3 {
-    color: #FAE3B0;
-    background-color: #96CDFB;
-}
-
-#memory {
-    background-color: #96CDFB;
-}
-
-#custom-arrow-4 {
-    color: #96CDFB;
-    background-color: #F5C2E7;
-}
-
-#cpu {
-    background-color: #F5C2E7;
-}
-
-#custom-arrow-5 {
-    color: #F5C2E7;
-    background-color: #89DCEB;
-}
-
-#battery {
-    background-color: #89DCEB;
-}
-
-#custom-arrow-6 {
-    color: #89DCEB;
-    background-color: #D9E0EE;
-}
-
-#clock {
-    background-color: #D9E0EE;
-}
-
-#custom-arrow-7 {
-    color: #D9E0EE;
-    background-color: #F28FAD;
+    color: white;
+    background-color: black;
 }
 
 #custom-spotify {
-    background-color: #F28FAD;
+    color: white;
+    background-color: black;
+}
+
+#custom-arrow-2 {
+    color: white;
+    background-color: black;
+}
+
+#clock {
+    color: white;
+    background-color: black;
+}
+
+#custom-arrow-3 {
+    color: white;
+    background-color: black;
+}
+
+#backlight {
+    color: white;
+    background-color: black;
+}
+
+#custom-arrow-4 {
+    color: white;
+    background-color: black;
+}
+
+#pulseaudio {
+    color: white;
+    background-color: black;
+}
+
+#custom-arrow-5 {
+    color: white;
+    background-color: black;
+}
+
+#memory {
+    color: white;
+    background-color: black;
+}
+
+#custom-arrow-6 {
+    color: white;
+    background-color: black;
+}
+
+#cpu {
+    color: white;
+    background-color: black;
+}
+
+#custom-arrow-7 {
+    color: white;
+    background-color: black;
+}
+
+#battery {
+    color: white;
+    background-color: black;
 }
 
 #custom-arrow-8 {
-    color: #F28FAD;
-    background-color: #ABE9B3;
+    color: white;
+    background-color: black;
 }
 
 #tray {
-    background-color: #ABE9B3;
+    color: white;
+    background-color: black;
 }
 
 #custom-arrow-9 {
-    color: #ABE9B3;
-    background-color: #1E1D2F;
+    color: white;
+    background-color: black;
 }
 
 window#waybar {
-	background: #1E1D2F;
-	color: #1A1826;
+	background: black;
+	color: white;
 }
