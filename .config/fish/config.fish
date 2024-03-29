@@ -1,6 +1,6 @@
 set fish_greeting
 
-#starship init fish | source
+starship init fish | source
 
 #nvm use 18
 

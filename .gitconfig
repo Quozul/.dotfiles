@@ -29,3 +29,4 @@
 	required = true
 [core]
 	excludesFile = ~/.gitignore
+	editor = nvim
